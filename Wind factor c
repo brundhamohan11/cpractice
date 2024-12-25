@@ -1,0 +1,19 @@
+QUESTION:
+Wind chill factor is the felt air temperature on exposed skin due to the wind. The wind chill temperature is always lower than the air temperature and is calculated as per the following formula.
+
+WCF = 35.74 + 0.6215t + (0.4275t - 35.75) * v^0.16
+
+Write a program to receive values of temperature and wind velocity and calculate the Wind Chill Factor.
+
+
+
+ #include<stdio.h>
+#include <math.h>
+int main() {
+    int temperature, wind_velocity;
+    scanf("%d %d", &temperature, &wind_velocity);
+    double wcf = 35.74 + 0.6215 * temperature + (0.4275 * temperature - 35.75) * pow(wind_velocity, 0.16);
+    printf("%.2f\n", wcf);
+
+    return 0;
+}
