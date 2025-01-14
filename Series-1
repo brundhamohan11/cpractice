@@ -1,0 +1,23 @@
+QUESTION:
+Write a C program to generate the following series  7, 5, 8, 6, 9….
+#include<stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int odd=7,even=5;
+    for(int i=1;i<=n;i++)
+    {
+        if(i%2==0)
+        {
+            printf("%d ",even);
+            even+=1;
+        }
+else{
+    printf("%d ",odd);
+    odd+=1;
+    }
+    }
+
+}
