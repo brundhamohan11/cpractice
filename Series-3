@@ -1,0 +1,22 @@
+QUESTION:
+Write a C program to generate the following series 6, 9, 14, 21, 30….
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+
+	int n;
+	scanf("%d",&n);
+	int first=6,help=3;
+	for(int i=1;i<=n;i++){
+	    printf("%d ",first);
+	    first+=help;
+	    help+=2;
+	}
+	
+	return 0;
+}
