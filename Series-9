@@ -1,0 +1,25 @@
+QUESTION:
+Write a C program to generate the following series 1, 4, 27, 16, 125….
+
+
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        int term;
+        if(i%2==1){
+            term=pow(i,3);
+        }
+        else{
+            term=pow(i,2);
+        }
+        printf("%d ",term);
+    }
+    printf("\n");
+
+	return 0;
+}
