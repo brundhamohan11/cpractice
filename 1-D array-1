@@ -1,0 +1,19 @@
+QUESTION:
+Aadhi is learning storage structure with the help of Ragavi. Ragavi's first task is to make Aadhi understand the concept of arrays by asking Aadhi to create an array dynamically and get the inputs into the array and print the array. As Aadhi had confusion, he has approached you for help. Help Aadhi by writing a program to create an array, get inputs and print the inputs.
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    int arr[n];
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    for( int i=0;i<n;i++){
+        printf("%d\n",arr[i]);
+    }
+    return 0;
+}
