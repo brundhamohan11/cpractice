@@ -1,0 +1,30 @@
+QUESTION:
+Write a C program to count the number of even and odd elements in an array.
+
+
+#include<stdio.h>
+int main()
+{
+    int size;
+    scanf("%d",&size);
+    int arr [size];
+    int even=0,odd=0;
+    for(int i=0;i<size;i++)
+    {
+            scanf("%d",&arr[i]);
+    }
+        for(int i=0;i<size;i++)
+        {
+            if(arr[i]%2==0)
+            {
+                even++;
+            }
+            else
+            {
+                odd++;
+            }
+            printf("Odd: %d\n",odd);
+            printf("Even: %d\n",even);
+        }
+        return 0;
+    }
