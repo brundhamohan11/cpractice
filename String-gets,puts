@@ -1,0 +1,16 @@
+QUESTION:
+Write a C program to scan the string from the user and to print it by using gets and puts.
+
+
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{
+    char str[25];
+    fgets(str,25,stdin);
+    puts("The string is");
+    puts(str);
+    return 0;
+}
