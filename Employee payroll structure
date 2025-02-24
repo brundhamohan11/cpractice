@@ -1,0 +1,58 @@
+QUESTION:
+Write a C program to generate employee payroll using structures.
+
+
+#include<stdio.h>
+#include<string.h>
+struct emp{
+    int id;
+    char name[1000];
+    int salary;
+    int hra;
+    int da,medi;
+    int pf,insu;
+    float gs,ns;
+};
+int main()
+{
+    //Enter code here
+    int a,b;
+   
+    printf("Enter the number of employees:\n");
+    scanf("%d",&a);
+    struct emp det[a];
+    printf("Enter your input for every employee:\n");
+    for(int i=0;i<a;i++){
+        printf("Employee ID: \n");
+        scanf("%d",&det[i].id);
+        printf("Employee Name: \n");
+        scanf("%s",det[i].name);
+        printf("Basic Salary, HRA: \n");
+        scanf("%d %d",&det[i].salary,&det[i].hra);
+        printf("DA, Medical Allowance: \n");
+        scanf("%d %d",&det[i].da,&det[i].medi);
+        printf("PF and Insurance: \n");
+        scanf("%d %d",&det[i].pf,&det[i].insu);
+       
+    }
+    printf("Enter employee ID to get payslip:\n");
+    scanf("%d",&b);
+    for(int i=0;i<a;i++){
+      if(det[i].id==b){
+        printf("Salary Slip of %s:\n",det[i].name);
+        printf("Employee ID: %d\n",det[i].id);
+        printf("Basic Salary: %d\n",det[i].salary);
+        printf("House Rent Allowance: %d\n",det[i].hra);
+        printf("Dearness Allowance: %d\n",det[i].da);
+        printf("Medical Allowance: %d\n",det[i].medi);
+        det[i].gs=(det[i].salary*12)+(12*det[i].hra)+(12*det[i].da)+(12*det[i].medi);
+        printf("Gross Salary: %.2f Rupees\n",det[i].gs);
+        printf("Deductions:\n");
+        printf("Provident fund: %d\n",det[i].pf);
+        printf("Insurance: %d\n",det[i].insu);
+        det[i].ns=det[i].gs-((det[i].pf*12)+(det[i].insu*12));
+        printf("Net Salary: %.2f Rupees\n",det[i].ns);
+      }
+    }
+    return 0;
+}
