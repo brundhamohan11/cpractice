@@ -1,0 +1,21 @@
+QUESTION:
+Write a C program to store the employee details using Union.
+
+#include<stdio.h>
+#include<string.h>
+union emp
+{
+    char name[20];
+    int salary;
+}u_var;
+int main()
+{
+    printf("Enter the employee details\n");
+    printf("Enter the employee name\n");
+    scanf("%s",u_var.name);
+    printf("Enter the employee salary\n");
+    scanf("%d",&u_var.salary);
+    printf("Employee details\n");
+    printf("%s %d",u_var.name,u_var.salary);
+    return 0;
+}
